@@ -1,0 +1,136 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Raleway','Arial', sans-serif;
+}
+
+.heder1, .heder2{
+    background-color: black;
+    height: 250px;
+    color: white;
+    display: inherit;
+    .nawigacja {
+        
+        padding: 30px;
+        text-align: right;
+     
+        li{
+            padding: 5px; 
+            margin: 10px;
+            margin-bottom: 0;
+            list-style: none;
+            display: inline;
+            color: white;
+
+        }  
+       
+    }
+    h1, p {
+        text-align: center;
+        padding: 20px;
+    }
+}
+.footer{
+    background-color: black;
+    color: white;
+    height: 80px;
+    p{
+        max-width: 1024px;
+        padding: 40px 0 0 20px;
+    }
+}
+
+.mainsection{
+    background-color: darkgreen;
+    display: flex;
+    align-items: center;
+    .mainsection-container{
+        max-width: 1150px;
+        //display:flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+
+        .fish-list{
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: auto;
+            
+            li{
+                
+                margin: 15px;
+                box-sizing: border-box;
+                border: solid 1px black;
+                width: 350px;
+                height: 350px;
+                background-color: black;
+                color: gray;
+                img{
+                    width: 348px;
+                    height: 200px;
+                }
+                div{
+                    display: flex;
+                    flex-wrap: wrap;
+                    .box1, .box2{
+                        width: 150px;
+                        height: 120px;
+                        padding: 10px;
+                    }
+                    .box2{
+                        margin: auto;
+                        box-sizing: border-box;
+                        input{
+                            margin: auto;
+                            height: 20px;
+                            width: 100px;
+                        }
+                        button{
+                            bottom-style: none;
+                            margin: auto;
+                            height: 30px;
+                            width: 100px;
+                        }
+                    }
+                }                
+            }           
+        }       
+    }
+}
+
+.container-site2{
+    //background-image: url('../images/ryuboku.jpg');
+    min-height: 800px;
+    background-color: #599d55;
+
+    .box-center{
+        input{
+            width: 100px;
+            height: 30px;
+            margin: 15px;
+        }
+        button{
+
+        }
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 20px;
+        margin: auto;
+        width: 400px;
+        height: 450px;
+        border: solid 1px black;       
+        background-color:  #ebdf80;
+    }   
+    .minefishes, .answer{
+        opacity: 0.5;
+        background-color:   #eee9c3;
+        border: solid 1px black;
+        width: 300px;
+        height: 200px;
+    }
+}

@@ -3,11 +3,10 @@ import ReactDOM from 'react-dom';
 import {HashRouter as Router,Route,Switch,NavLink, Link} from "react-router-dom"
 import { MainSite, ListSite } from "./components/Components.jsx";
 import FishList from "./fishlist"
+import '../css/style.scss';
+//import '../images';
 
-
-
-const Main = (props) =>{
-    
+const Main = (props) =>{    
     return(
         <MainSite fishs={props.fishs}/>
     )
@@ -25,10 +24,7 @@ const NotFund =()=>{
 }
 
 class App extends React.Component{
-    
-
     render(){
-        console.info(this.props.fishs);
         return (
             <Router>
                 <div>

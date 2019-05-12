@@ -1,24 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {HashRouter as Router,Route,Switch,NavLink, Link} from "react-router-dom"
 
 
 
-class FishComp extends React.Component{
-
-
-
+ class FishComp extends React.Component{
     render(){
         return(
             <li key={this.props.fish.index}>
                 <img src={this.props.fish.image}/>
                 <div>
-                    <div>
+                    <div className="box1">
                         <h3>{this.props.fish.name}</h3>
                         <p>Wielkość: {this.props.fish.size}cm</p>
                     </div>
-                    <div>
+                    <div className="box2">
                         <input/>
-                        <button onClick={this.hadleButton}>Dodaj</button>
+                        <button >Dodaj </button>
                     </div>
                 </div>
             </li>
@@ -27,8 +25,9 @@ class FishComp extends React.Component{
 }
 
 const Akwarium =(props)=>{
+    
     return(
-        <div>
+        <div className="box-center">
             <input/>
             <button>Gotowe!</button>
             <div className='minefishes'>
@@ -50,7 +49,7 @@ class MainSection extends React.Component{
             <div className="mainsection">
                 <div className="mainsection-container">
                     <ul className="fish-list">
-                        {this.props.fishs.map((fish,index) => <FishComp fish={fish} />)}
+                        {this.props.fishs.map((fish) => <FishComp fish={fish} />)}
                     </ul>
                 </div>
             </div>
@@ -76,8 +75,8 @@ class Navi extends React.Component{
         return(
             <div>
                 <ul className="nawigacja">
-                    <li>Lista Gatunków</li>
-                    <li>Twoje Akwarium</li>
+                    <li><Link to="/">Lista Gatunków</Link></li>
+                    <li><Link to="/twoje">Twoje Akwarium</Link></li>
                 </ul>
             </div>
         )
@@ -117,7 +116,9 @@ class MainSite extends React.Component{
         return (
             <div>
                 <Header1/>
+                
                 <MainSection {...this.props} />
+                
                 <Footer/>
 
             </div>
@@ -131,7 +132,9 @@ class ListSite extends React.Component{
         return (
             <div>
                  <Header2/>
+                 <div className="container-site2">
                  <Akwarium {...this.props}/>
+                 </div>                
                  <Footer/>
             </div>
             
